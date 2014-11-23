@@ -23,6 +23,7 @@ a {
 	-moz-transition:	0.2s ease;
 	-o-transition:		0.2s ease;
 }
+/*
 .button {
 	background-color:#FF9326;
 	font-weight:700;
@@ -37,6 +38,52 @@ a {
 	.button:hover {
 		background-color:rgba(255, 147, 38, 0.8);
 	}
+
+.button {
+	display: inline-block;
+	position: relative;
+	width: 120px;
+	height: 44px;
+	line-height: 44px;
+	border-radius: 22px;
+	font-size: 0.9em;
+	background-color: ≈;
+	color:#FFF;
+	font-size:1em;
+	overflow:hidden;
+}
+
+.button > paper-ripple {
+	border-radius: 2px;
+	overflow: hidden;
+}*/
+
+paper-button[raised].colored {
+	background: #FF9326;
+	color: #fff;
+}
+
+#submit-button{
+	background-color:#FF9326;
+	font-weight:700;
+	padding:7px 14px;
+	width: 130px;
+	color:#FFF;
+	font-size:1em;
+	letter-spacing:2px;
+	border-radius:30px;
+	text-transform:uppercase;
+	display:inline-block;
+	position: relative;
+	left: 50%;
+	margin-left: -65px;
+
+	-webkit-animation: fade-in-3 1.75s ease;
+  	-moz-animation:    fade-in-3 1.75s ease;
+  	-o-animation:      fade-in-3 1.75s ease;
+  	animation:         fade-in-3 1.75s ease;
+}
+
 .sect {
 	transition:			0.2s ease;
 	-webkit-transition:	0.2s ease;
@@ -307,6 +354,71 @@ footer h3 {
 	footer p a:hover {
 		color:#FFF;
 	}
+
+.background-image-container{
+	position:absolute;
+	top:0px;
+	z-index:-100;
+}
+
+.background-image-container img {
+	display:block;
+	position:absolute;
+}
+
+.background-image-container img {
+  -webkit-animation-name: cf4FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 40s;
+
+  -moz-animation-name: cf4FadeInOut;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 40s;
+
+  -o-animation-name: cf4FadeInOut;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 40s;
+
+  animation-name: cf4FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 40s;
+}
+.background-image-container img:nth-of-type(1) {
+  -webkit-animation-delay: 30s;
+  -moz-animation-delay: 30s;
+  -o-animation-delay: 30s;
+  animation-delay: 30s;
+}
+.background-image-container img:nth-of-type(2) {
+  -webkit-animation-delay: 20s;
+  -moz-animation-delay: 20s;
+  -o-animation-delay: 20s;
+  animation-delay: 20s;
+}
+.background-image-container img:nth-of-type(3) {
+  -webkit-animation-delay: 10s;
+  -moz-animation-delay: 10s;
+  -o-animation-delay: 10s;
+  animation-delay: 10s;
+}
+.background-image-container img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
+@-webkit-keyframes cf4FadeInOut{	0% {opacity:1;} 20% {opacity:1;} 25% {opacity:0;} 87% {opacity:0;} 100% {opacity:1;}}
+@-moz-keyframes cf4FadeInOut{		0% {opacity:1;} 20% {opacity:1;} 25% {opacity:0;} 87% {opacity:0;} 100% {opacity:1;}}
+@-o-keyframes cf4FadeInOut{			0% {opacity:1;} 20% {opacity:1;} 25% {opacity:0;} 87% {opacity:0;} 100% {opacity:1;}}
+@keyframes cf4FadeInOut{			0% {opacity:1;} 20% {opacity:1;} 25% {opacity:0;} 87% {opacity:0;} 100% {opacity:1;}}
+
+
+
 @-webkit-keyframes fade-in { 	0% { opacity: 0; } 100% { opacity: 1; } }
 @-moz-keyframes fade-in { 		0% { opacity: 0; } 100% { opacity: 1; } }
 @-o-keyframes fade-in { 		0% { opacity: 0; } 100% { opacity: 1; } }

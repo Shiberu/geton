@@ -3,6 +3,9 @@
 	<title>GetOn</title>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:100|Open+Sans:300,700' rel='stylesheet' type='text/css'>
 	<link href="styles/style.css" rel="stylesheet">
+	<link rel="import" href="http://www.polymer-project.org/components/paper-button/paper-button.html">
+	<link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
+	<link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html">
 </head>
 	<body>
 		<header>
@@ -16,13 +19,17 @@
 				</ul>
 			</nav>
 		</header>
-		<section class="top center-container" style="background:url('images/bg-index-top.jpg');background-size:cover">
+		<section class="top center-container">
 			<div class="center">
 				<h1 class="title">Stop waiting. Start playing.</h1>
 				<h2 class="subtitle">Notify your friends anytime, anywhere.</h2>
-				<span class="break"><a href="#" class="button">Sign Up</a></span>
+				<span class="break">
+					<paper-button class="colored" id="submit-button" raised>
+						Sign up
+					</paper-button>
+				</span>
 			</div>
-			<!-- div class="bar">
+			<!--div class="bar">
 				<p class="msg">Interested?</p>
 				<form class="input">
 					<input class="bar-input" placeholder="your email here">
@@ -34,7 +41,13 @@
 						</span>
 					</span>
 				</form>
-			</div -->
+			</div-->
+			<div class="background-image-container">
+				<img src="images/bg-index-top1.jpg"></img>
+				<img src="images/bg-index-top2.jpg"></img>
+				<img src="images/bg-index-top3.jpg"></img>
+				<img src="images/bg-index-top4.jpg"></img>
+			</div>
 		</section>
 	</body>
 </html>
