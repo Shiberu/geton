@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>GetOn</title>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:100|Open+Sans:300,700' rel='stylesheet' type='text/css'>
+		<link href="styles/style.css" rel="stylesheet">
+		<link rel="import" href="http://www.polymer-project.org/components/paper-button/paper-button.html">
+		<link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
+		<link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html">
+		<link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-input-decorator.html">
+		<link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-input.html">
+		<link rel="import" href="http://www.polymer-project.org/components/paper-checkbox/paper-checkbox.html">
+		<link rel="import" href="http://www.polymer-project.org/components/core-label/core-label.html">
+
+		<script src="http://www.polymer-project.org/components/webcomponentsjs/webcomponents.js"></script>
+		<script src="js/jquery-1.11.1.min.js"> </script>
+		<script src="js/signup.js"> </script>
+	</head>
+	<body>
+		<div class="no-overflow">
+			<div class="background-slider">
+			</div>
+			<div class="container">
+				<div class="center">
+					<div class="header">
+						<h1>
+							GETON
+						</h1>
+						<h2>
+							Sign up
+						</h2>
+					</div>
+					<div class="content">
+						<form accept-charset="UTF-8" class="signup-form" action="/home/index" method="post">
+							<div class="basic-info">
+								<h2>
+									Basic Information
+								</h2>
+								<hr class="form-divider"/>
+								<div class="input-row">
+									<paper-input-decorator class="signup-input half-input" label="First Name" id="firstname-decor" floatingLabel error="Input is required!">
+										<input is="core-input" id="firstname-input">
+									</paper-input-decorator>
+
+									<paper-input-decorator class="signup-input half-input" label="Last Name" id="lastname-decor" floatingLabel error="Input is required!">
+										<input is="core-input" id="lastname-input">
+									</paper-input-decorator>
+								</div>
+								<div class="input-row">
+									<paper-input-decorator class="signup-input" label="E-mail Address" id="email-decor" floatingLabel error="Input is required!">
+										<input is="core-input" id="email-input">
+									</paper-input-decorator>
+								</div>
+								<div class="input-row">
+									<paper-input-decorator class="signup-input" label="Confirm E-mail Address" id="email-confirm-decor" floatingLabel error="Invalid input!">
+										<input is="core-input" id="email-confirm-input">
+									</paper-input-decorator>
+								</div>
+								<br>
+								<hr class="sub-divider">
+								<div class="input-row">
+									<paper-input-decorator class="signup-input" label="Username" id="username-decor" floatingLabel error="Input is required!">
+										<input is="core-input" id="username-input">
+									</paper-input-decorator>
+								</div>
+								<div class="input-row">
+									<paper-input-decorator class="signup-input" label="Password" id="password-decor" floatingLabel error="Input is required!">
+										<input type="password" is="core-input" id="password-input">
+									</paper-input-decorator>
+								</div>
+								<div class="input-row">
+									<paper-input-decorator class="signup-input" label="Confirm Password" id="password-confirm-decor" floatingLabel error="Invalid input!">
+										<input type="password" is="core-input" id="password-confirm-input">
+									</paper-input-decorator>
+								</div>
+								<paper-button class="colored custom basic-info-button" disabled="true">
+									<core-icon icon="check"></core-icon>
+									NEXT
+								</paper-button>
+							</div>
+							<div class="game-select">
+								<h2>
+									Which games do you enjoy playing?
+								</h2>
+								<hr class="form-divider"/>
+								<div class="game-scroller-wrapper">
+									<div class="game-scroller">
+										<core-label class="game-list-item" horizontal layout>
+											<div class="item-wrapper">
+												<paper-checkbox for></paper-checkbox>
+												<div class="img-wrapper">
+													<img src="images/League_of_legends_logo_transparent.png" alt="LoL">
+												</div>
+												<div class="game-name-wrapper">
+													<h4>League of Legends</h4>
+												</div>
+											</div>
+										</core-label>
+										<core-label class="game-list-item" horizontal layout>
+											<div class="item-wrapper">
+												<paper-checkbox for></paper-checkbox>
+												<div class="img-wrapper">
+													<img src="images/maplestory.png" alt="ms">
+												</div>
+												<div class="game-name-wrapper">
+													<h4>Maple Story</h4>
+												</div>
+											</div>
+										</core-label>
+										<core-label class="game-list-item" horizontal layout>
+											<div class="item-wrapper">
+												<paper-checkbox for></paper-checkbox>
+												<div class="img-wrapper">
+													<img src="images/mabinogi.png" alt="mabinogi">
+												</div>
+												<div class="game-name-wrapper">
+													<h4>Mabinogi</h4>
+												</div>
+											</div>
+										</core-label>
+										<core-label class="game-list-item" horizontal layout>
+											<div class="item-wrapper">
+												<paper-checkbox for></paper-checkbox>
+												<div class="img-wrapper">
+													<img src="images/CoD_logo.png" alt="CoD">
+												</div>
+												<div class="game-name-wrapper">
+													<h4>Call of Duty</h4>
+												</div>
+											</div>
+										</core-label>
+										<core-label class="game-list-item" horizontal layout>
+											<div class="item-wrapper">
+												<paper-checkbox for></paper-checkbox>
+												<div class="img-wrapper">
+													<img src="images/runescape.png" alt="rs">
+												</div>
+												<div class="game-name-wrapper">
+													<h4>Runescape</h4>
+												</div>
+											</div>
+										</core-label>
+									</div>
+								</div>
+								<paper-button class="colored custom sign-up-button">
+									<core-icon icon="check"></core-icon>
+									SIGN UP!
+								</paper-button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
