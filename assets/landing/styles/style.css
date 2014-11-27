@@ -58,11 +58,6 @@ a {
 	overflow: hidden;
 }*/
 
-paper-button[raised].colored {
-	background: #FF9326;
-	color: #fff;
-}
-
 #submit-button{
 	background-color:#FF9326;
 	font-weight:700;
@@ -354,6 +349,335 @@ footer h3 {
 	footer p a:hover {
 		color:#FFF;
 	}
+
+
+.show-more-button{
+	position: relative;
+	width: 200px;
+	height: 50px;
+	left: 50%;
+	margin-left: -100px;
+	margin-top: 20px;
+	overflow: hidden;
+	border: solid 3px #fbfbfb;
+	border-radius: 10px;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+	-webkit-animation:	color_flow_background 4s infinite;
+	-moz-animation:		color_flow_background 4s infinite;
+	-o-animation:		color_flow_background 4s infinite;
+	animation:			color_flow_background 4s infinite;
+}
+
+.more-basic{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 22px;
+	line-height: 50px;
+	font-style: bold;
+	color: #fbfbfb;
+	z-index: 110;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.ease-more-button{
+	position: absolute;
+	background-color: #fbfbfb;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 0%;
+	z-index: 100;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.more-basic:hover{
+	background-color: #fbfbfb;
+}
+
+
+.show-more-button:hover .ease-more-button{
+	width: 100%;
+}
+
+#show-more-signup:hover{
+	-webkit-animation:	color_flow_border 4s infinite;
+	-moz-animation:		color_flow_border 4s infinite;
+	-o-animation:		color_flow_border 4s infinite;
+	animation:			color_flow_border 4s infinite;
+}
+
+#show-more-signup:hover .more-basic{
+	-webkit-animation:	color_flow_text 4s infinite;
+	-moz-animation:		color_flow_text 4s infinite;
+	-o-animation:		color_flow_text 4s infinite;
+	animation:			color_flow_text 4s infinite;
+}
+
+@-webkit-keyframes color_flow_border{
+	0%{border: solid 3px #FF4747;}
+	17%{border: solid 3px #FFD633;}
+	33%{border: solid 3px #8AE68A;}
+	50%{border: solid 3px #5CE6E6;}
+	67%{border: solid 3px #9999FF;}
+	84%{border: solid 3px #DF5FFF;}
+	100%{border: solid 3px #FF4747;}
+}
+@-moz-keyframes color_flow_border{
+	0%{border: solid 3px #FF4747;}
+	17%{border: solid 3px #FFD633;}
+	33%{border: solid 3px #8AE68A;}
+	50%{border: solid 3px #5CE6E6;}
+	67%{border: solid 3px #9999FF;}
+	84%{border: solid 3px #DF5FFF;}
+	100%{border: solid 3px #FF4747;}
+}
+@-o-keyframes color_flow_border{
+	0%{border: solid 3px #FF4747;}
+	17%{border: solid 3px #FFD633;}
+	33%{border: solid 3px #8AE68A;}
+	50%{border: solid 3px #5CE6E6;}
+	67%{border: solid 3px #9999FF;}
+	84%{border: solid 3px #DF5FFF;}
+	100%{border: solid 3px #FF4747;}
+}
+@keyframes color_flow_border{
+	0%{border: solid 3px #FF4747;}
+	17%{border: solid 3px #FFD633;}
+	33%{border: solid 3px #8AE68A;}
+	50%{border: solid 3px #5CE6E6;}
+	67%{border: solid 3px #9999FF;}
+	84%{border: solid 3px #DF5FFF;}
+	100%{border: solid 3px #FF4747;}
+}
+
+@-webkit-keyframes color_flow_text{
+	0%{color: #FF4747;}
+	17%{color: #FFD633;}
+	33%{color: #8AE68A;}
+	50%{color: #5CE6E6;}
+	67%{color: #9999FF;}
+	84%{color: #DF5FFF;}
+	100%{color: #FF4747;}
+}
+@-moz-keyframes color_flow_text{
+	0%{color: #FF4747;}
+	17%{color: #FFD633;}
+	33%{color: #8AE68A;}
+	50%{color: #5CE6E6;}
+	67%{color: #9999FF;}
+	84%{color: #DF5FFF;}
+	100%{color: #FF4747;}
+}
+@-o-keyframes color_flow_text{
+	0%{color: #FF4747;}
+	17%{color: #FFD633;}
+	33%{color: #8AE68A;}
+	50%{color: #5CE6E6;}
+	67%{color: #9999FF;}
+	84%{color: #DF5FFF;}
+	100%{color: #FF4747;}
+}
+@keyframes color_flow_text{
+	0%{color: #FF4747;}
+	17%{color: #FFD633;}
+	33%{color: #8AE68A;}
+	50%{color: #5CE6E6;}
+	67%{color: #9999FF;}
+	84%{color: #DF5FFF;}
+	100%{color: #FF4747;}
+}
+
+@-webkit-keyframes color_flow_background{
+	0%{background-color: rgba(255, 71, 71, 0.3);}
+	17%{background-color: rgba(255, 214, 51, 0.3);}
+	33%{background-color: rgba(138, 230, 138, 0.3);}
+	50%{background-color: rgba(92, 230, 230, 0.3);}
+	67%{background-color: rgba(153, 153, 255, 0.3);}
+	84%{background-color: rgba(223, 95, 255, 0.3);}
+	100%{background-color: rgba(255, 71, 71, 0.3);}
+}
+@-moz-keyframes color_flow_background{
+	0%{background-color: rgba(255, 71, 71, 0.3);}
+	17%{background-color: rgba(255, 214, 51, 0.3);}
+	33%{background-color: rgba(138, 230, 138, 0.3);}
+	50%{background-color: rgba(92, 230, 230, 0.3);}
+	67%{background-color: rgba(153, 153, 255, 0.3);}
+	84%{background-color: rgba(223, 95, 255, 0.3);}
+	100%{background-color: rgba(255, 71, 71, 0.3);}
+}
+@-o-keyframes color_flow_background{
+	0%{background-color: rgba(255, 71, 71, 0.3);}
+	17%{background-color: rgba(255, 214, 51, 0.3);}
+	33%{background-color: rgba(138, 230, 138, 0.3);}
+	50%{background-color: rgba(92, 230, 230, 0.3);}
+	67%{background-color: rgba(153, 153, 255, 0.3);}
+	84%{background-color: rgba(223, 95, 255, 0.3);}
+	100%{background-color: rgba(255, 71, 71, 0.3);}
+}
+@keyframes color_flow_background{
+	0%{background-color: rgba(255, 71, 71, 0.3);}
+	17%{background-color: rgba(255, 214, 51, 0.3);}
+	33%{background-color: rgba(138, 230, 138, 0.3);}
+	50%{background-color: rgba(92, 230, 230, 0.3);}
+	67%{background-color: rgba(153, 153, 255, 0.3);}
+	84%{background-color: rgba(223, 95, 255, 0.3);}
+	100%{background-color: rgba(255, 71, 71, 0.3);}
+}
+
+
+.login-dialog{
+	position: absolute;
+	width: 60%;
+	max-width: 350px;
+	height: auto;
+	left: 50%;
+	margin-left: -175px;
+	bottom: -40%;
+	z-index: 200;
+}
+
+.dialog-hidden{
+	bottom: 300%;
+}
+
+.login-title{
+	color: #fbfbfb;
+	font-size: 60px;
+	width: 100%;
+	height: 80px;
+	line-height: 50px;
+	text-shadow: 1px 5px #707070;
+	font-weight: bold;
+	-webkit-animation:	color_flow_text 4s infinite;
+	-moz-animation:		color_flow_text 4s infinite;
+	-o-animation:		color_flow_text 4s infinite;
+	animation:			color_flow_text 4s infinite;
+}
+
+.login-box{
+	background: #1d1d1d;
+	text-align: left;
+	width: 100%;
+	color: #fbfbfb;
+	height: 250px;
+	border-radius: 10px;
+	border: solid 2px #fbfbfb;
+}
+
+.login-input{
+	display :block;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.login-input /deep/ ::-webkit-input-placeholder{
+	color: #fbfbfb;
+}
+
+.login-input /deep/ ::-moz-placeholder{
+	color: #fbfbfb;
+}
+
+.login-input /deep/ :-ms-input-placeholder{
+	color: #fbfbfb;
+}
+
+.login-input /deep/ .label-text,
+.login-input /deep/ .error {
+	color: #f4b400;
+}
+
+.login-input /deep/ .unfocused-underline {
+	background-color: #f4b400;
+}
+
+.login-input[focused] /deep/ .floated-label .label-text {
+	color: #f4b400;
+	font-weight: bold;
+}
+
+.login-input /deep/ .focused-underline {
+	background-color: #f4b400;
+}
+
+.login-input /deep/ .cursor {
+	background-color: #1a237e;
+}
+
+.login-input.invalid /deep/ .floated-label .label-text,
+.login-input /deep/ .error {
+	color: #f06292;
+}
+
+.login-input.invalid /deep/ .focused-underline,
+.login-input.invalid /deep/ .cursor {
+	background-color: #f06292;
+}
+
+.login-buttons{
+	left: 50%;
+	top: 10%;
+	margin-left: -50px;
+	text-align: center;
+}
+
+.login-buttons paper-button{
+	display: inline-block;
+}
+
+paper-button.colored {
+	color: #f4b400;
+}
+
+paper-button[raised].colored {
+	background: #f4b400;
+	color: #fff;
+}
+
+paper-button.custom > core-icon {
+	margin-right: 4px;
+}
+
+paper-button.hover:hover {
+	background: #eee;
+}
+
+paper-button.yellow-ripple::shadow #ripple {
+	color: #f4b400;
+}
+
+.filter{
+	position:absolute;
+	top:0px;
+	height: 100%;
+	width: 100%;
+	z-index: 150;
+	background: black;
+	opacity: 0.8;
+}
+
+.filter-hidden{
+	visibility: hidden;
+}
 
 .background-image-container{
 	position:absolute;

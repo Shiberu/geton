@@ -3,17 +3,14 @@
 	<title>GetOn</title>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:100|Open+Sans:300,700' rel='stylesheet' type='text/css'>
 	<link href="styles/style.css" rel="stylesheet">
-
-	<script src="http://www.polymer-project.org/components/webcomponentsjs/webcomponents.js"></script>
-
 	<link rel="import" href="http://www.polymer-project.org/components/paper-button/paper-button.html">
 	<link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
 	<link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html">
-	<link rel="import" href="http://www.polymer-project.org/components/core-transition/core-transition-css.html">
-	<link rel="import" href="http://www.polymer-project.org/components/core-overlay/core-overlay.html">
-	<link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-autogrow-textarea.html">
 	<link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-input-decorator.html">
 	<link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-input.html">
+
+	<script src="js/jquery-1.11.1.min.js"> </script>
+	<script src="js/landing.js"> </script>
 </head>
 	<body>
 		<header>
@@ -23,9 +20,7 @@
 			</div>
 			<nav>
 				<ul>
-					<section>
-						<x-container></x-container>
-					</section>
+					<li><a id="login-open-button" href="#">Login</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -34,10 +29,42 @@
 				<h1 class="title">Stop waiting. Start playing.</h1>
 				<h2 class="subtitle">Notify your friends anytime, anywhere.</h2>
 				<span class="break">
-					<paper-button class="colored" id="submit-button" raised>
-						Sign up
-					</paper-button>
+					<a class="button" href="javascript:void(0)">
+						<div class="show-more-button" id="show-more-signup">
+							<div class="more-basic">
+								SIGN UP
+							</div>
+							<div class="ease-more-button">
+							</div>
+							<div class="background-cover">
+							</div>
+						</div>
+					</a>
 				</span>
+
+				<div class="login-dialog dialog-hidden" id="login-dialog">
+					<div class="login-title">
+						>login_
+					</div>
+					<div class="login-box">
+						<paper-input-decorator class="login-input" label="Username" floatingLabel>
+							<input is="core-input" id="username-input">
+						</paper-input-decorator><br>
+						<paper-input-decorator class="login-input" label="Password" floatingLabel>
+							<input type="password" is="core-input" id="password-input">
+						</paper-input-decorator>
+						<div class="login-buttons">
+							<paper-button class="colored custom" id="login-submit">
+								<core-icon icon="check"></core-icon>
+								GET ON!
+							</paper-button>
+							<paper-button class="custom" id="login-cancel">
+								<core-icon icon="clear"></core-icon>
+								cancel
+							</paper-button>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!--div class="bar">
 				<p class="msg">Interested?</p>
@@ -58,168 +85,8 @@
 				<img src="images/bg-index-top3.jpg"></img>
 				<img src="images/bg-index-top4.jpg"></img>
 			</div>
-
-
+			<div class="filter filter-hidden" id="landing-filter">
+			</div>
 		</section>
-
-	<polymer-element name="x-dialog" attributes="opened autoCloseDisabled">
-	<template>
-		<style>
-
-			:host {
-				box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				font-family: Arial, Helvetica, sans-serif;
-				font-size: 13px;
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				overflow: hidden;
-				background: white;
-				padding:30px 42px;
-				outline: 1px solid rgba(0,0,0,0.2);
-				box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-			}
-		</style>
-		<core-overlay id="overlay" layered backdrop opened="{{opened}}" autoCloseDisabled="{{autoCloseDisabled}}"  transition="core-transition-center"></core-overlay>
-		<content></content>
-	</template>
-	<script>
-
-	Polymer('x-dialog', {
-	
-		ready: function() {
-			this.$.overlay.target = this;
-		},
-
-		toggle: function() {
-			this.$.overlay.toggle();
-		}
-
-	});
-
-	</script>
-	</polymer-element>
-
-	<polymer-element name="x-container">
-	<template>
-		<x-dialog id="dialog" class="dialog">
-			<style no-shim>
-				.dialog {
-					box-sizing: border-box;
-					-moz-box-sizing: border-box;
-					font-family: Arial, Helvetica, sans-serif;
-					font-size: 13px;
-					-webkit-user-select: none;
-					-moz-user-select: none;
-					overflow: hidden;
-					background: white;
-					padding:30px 42px;
-					outline: 1px solid rgba(0,0,0,0.2);
-					box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-				}
-
-				#dialog {
-					width: 500px;
-				}
-			</style>
-			<h2>LOGIN</h2>
-			
-			<paper-input-decorator label="ID" floatingLabel>
-				<input is="core-input">
-			</paper-input-decorator>
-			<paper-input-decorator label="Password" floatingLabel>
-				<input type="password" is="core-input">
-			</paper-input-decorator>
-			<paper-button raised class="colored">Get On!</paper-button>
-
-			<style>
-				paper-input-decorator{
-					line-height: 15px;
-					font-size: 20px;
-				}
-				paper-button[raised].colored {
-					background: #4285f4;
-					color: #fff;
-					position: relative;
-					margin-top: 10px;
-					margin-left: 80%;
-				}
-			</style>
-			<!--div>
-				<input placeholder="say something..." autofocus on-input="{{inputHandler}}" /><br>
-				I agree with this wholeheartedly.
-				<core-overlay layered id="confirmation" class="dialog" backdrop transition="core-transition-top">
-					<style no-shim>
-						.dialog {
-							box-sizing: border-box;
-							-moz-box-sizing: border-box;
-							font-family: Arial, Helvetica, sans-serif;
-							font-size: 13px;
-							-webkit-user-select: none;
-							-moz-user-select: none;
-							overflow: hidden;
-							background: white;
-							padding:30px 42px;
-							outline: 1px solid rgba(0,0,0,0.2);
-							box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-						}
-
-						#confirmation {
-							box-sizing: border-box;
-							text-align: center;
-							width: 150px;
-						}
-					</style>
-					Thank you.
-				</core-overlay>
-			</div><br><br>
-			<button core-overlay-toggle>OK</button-->
-		</x-dialog>
-
-		<ul>
-			<li><a on-tap="{{tapHandler}}" href="#">Login</a></li>
-		</ul>
-		<style>
-			ul{
-				list-style:none;
-			}
-			li a {
-				display:inline-block;
-				float:left;
-				margin: 0px;
-				padding:10px;
-				text-transform:uppercase;
-				font-size:0.85em;
-				border-bottom:1px dotted transparent;
-				color: white;
-				text-decoration: none;
-				transition:			0.2s ease;
-				-webkit-transition:	0.2s ease;
-				-moz-transition:	0.2s ease;
-				-o-transition:		0.2s ease;
-			}
-			li a:hover {
-				border-bottom:1px dotted #FFF;
-			}
-		</style>
-	</template>
-	<script>
-	
-	Polymer('x-container', {
-	
-		inputHandler: function(e) {
-			if (e.target.value === 'something') {
-				this.$.confirmation.toggle();
-			}
-		},
-	
-		tapHandler: function() {
-			this.$.dialog.toggle();
-		}
-	
-	});
-	
-	</script>
-	</polymer-element>
 	</body>
 </html>
