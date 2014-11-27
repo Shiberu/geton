@@ -185,8 +185,8 @@ h2{
 	box-pack:center;
 	box-align:center;
 
-	border-top: solid 2px #fbfbfb;
-	border-bottom: solid 2px #fbfbfb;
+	border-left: solid 2px #fbfbfb;
+	border-right: solid 2px #fbfbfb;
 	border-radius: 6px;
 }
 
