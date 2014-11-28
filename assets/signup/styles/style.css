@@ -10,6 +10,10 @@ body{
 	text-align: center;
 }
 
+html /deep/ paper-shadow {
+	display: inline-block;
+}
+
 .no-overflow{
 	position: relative;
 	overflow: hidden;
@@ -25,26 +29,26 @@ body{
 	left: -4600px;
 	width: 9200px;
 	height: 5800px;
-	-webkit-animation:	background_slider 180s linear infinite;
-	-moz-animation:		background_slider 180s linear infinite;
-	-o-animation:		background_slider 180s linear infinite;
-	animation:			background_slider 180s linear infinite;
+	-webkit-animation:	background_slider 3s linear infinite;
+	-moz-animation:		background_slider 3s linear infinite;
+	-o-animation:		background_slider 3s linear infinite;
+	animation:			background_slider 3s linear infinite;
 }
 
 @-webkit-keyframes background_slider{
-	from { top: -2900px; left: -4600px;}
+	from { top: -58px; left: -92px;}
 	to { top: 0px; left: 0px;}
 }
 @-moz-keyframes background_slider{
-	from { top: -2900px; left: -4600px;}
+	from { top: -58px; left: -92px;}
 	to { top: 0px; left: 0px;}
 }
 @-o-keyframes background_slider{
-	from { top: -2900px; left: -4600px;}
+	from { top: -58px; left: -92px;}
 	to { top: 0px; left: 0px;}
 }
 @keyframes background_slider{
-	from { top: -2900px; left: -4600px;}
+	from { top: -58px; left: -92px;}
 	to { top: 0px; left: 0px;}
 }
 

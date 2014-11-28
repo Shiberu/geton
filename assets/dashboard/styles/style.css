@@ -1,0 +1,347 @@
+* {
+	margin:0;
+	padding:0;
+	font-family:'Open Sans';
+	font-weight:300;
+	position:relative;
+}
+
+body{
+	text-align: center;
+}
+
+.no-overflow{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.background-slider{
+	background-image: url("../images/escheresque_ste_@2X.png");
+	background-repeat: repeat;
+	text-align: center;
+	position: absolute;
+	top: -2900px;
+	left: -4600px;
+	width: 9200px;
+	height: 5800px;
+	-webkit-animation:	background_slider 3s linear infinite;
+	-moz-animation:		background_slider 3s linear infinite;
+	-o-animation:		background_slider 3s linear infinite;
+	animation:			background_slider 3s linear infinite;
+}
+
+.left-nav-bar{
+	position: absolute;
+	left: 0px;
+	height: 100%;
+	width: 300px;
+	background-color: rgba(38, 38, 38, 1);;
+	box-shadow: 5px 0px 12px #fbfbfb;
+	z-index: 10;
+	-webkit-animation:	drop-in-nav 0.5s;
+	-moz-animation:		drop-in-nav 0.5s;
+	-o-animation:		drop-in-nav 0.5s;
+	animation:			drop-in-nav 0.5s;
+}
+
+.nav-bar-title{
+	display: inline-block;
+	width: 100%;
+	top: 30%;
+	margin-top: -35px;
+	color: #fbfbfb;
+	font-weight: 600;
+	font-size: 70px;
+	font-family: 'Raleway';
+	/*border-bottom: solid 6px #f4b400;*/
+}
+
+.nav-bar-title-underline{
+	display: inline-block;
+	top: 30%;
+	width: 306px;
+	left: -6px;
+	height: 7px;
+	background-color: #f4b400;
+	-webkit-animation:	glow-bar 2s linear infinite;
+	-moz-animation:		glow-bar 2s linear infinite;
+	-o-animation:		glow-bar 2s linear infinite;
+	animation:			glow-bar 2s linear infinite;
+}
+
+.nav-bar-welcome{
+	display: inline-block;
+	color: #fbfbfb;
+	top: 30%;
+	margin-top: 50px;
+	width: 100%;
+	font-size: 20px;
+}
+
+.nav-bar-username{
+	color: #f4b400;
+}
+
+.nav-bar-menu{
+	display: inline-block;
+	color: #fbfbfb;
+	top: 30%;
+	width: 100%;
+}
+
+.nav-bar-menu paper-shadow{
+	margin-top: 20px;
+	width: 250px;
+	margin-left: 25px;
+}
+
+.nav-bar-menu paper-item{
+	height: 60px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 60px;
+	background-color: #323232;
+}
+
+.nav-bar-menu paper-item div{
+	height: 90px;
+}
+
+.nav-bar-menu paper-item core-icon{
+	color: #f4b400;
+}
+
+
+.game-scroller-wrapper{
+	overflow: hidden;
+	margin-left: 280px;
+	-webkit-animation:	drop-in-bot 0.8s;
+	-moz-animation:		drop-in-bot 0.8s;
+	-o-animation:		drop-in-bot 0.8s;
+	animation:			drop-in-bot 0.8s;
+}
+
+.game-scroller{
+	margin-left: 20px;
+	width: 100%;
+	overflow-y:scroll;
+}
+
+.game-container{
+	height: 100%;
+	z-index: 0;
+	color: white;
+}
+
+.game-item-container{
+	width: 100%;
+	height: 360px;
+	-webkit-transition: height 0.6s;
+	-moz-transition: height 0.6s;
+	-o-transition: height 0.6s;
+	transition: height 0.6s;
+}
+
+.game-item-container .game-background{
+	position: absolute;
+	opacity: 0.2;
+	width: 100%;
+	height: 100%;
+	/*
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	*/
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 1;
+	-webkit-filter: brightness(30%);
+	-moz-filter: brightness(30%);
+	-o-filter: brightness(30%);
+	filter: brightness(30%);
+	-webkit-transition: width 0.6s;
+	-moz-transition: width 0.6s;
+	-o-transition: width 0.6s;
+	transition: width 0.6s;
+}
+
+.game-item-container .game-background-grad{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) , rgba(255, 255, 255, 0));
+	background: -o-linear-gradient(right, rgba(255, 255, 255, 0.1) , rgba(255, 255, 255, 0)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, rgba(255, 255, 255, 0.1) , rgba(255, 255, 255, 0)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.1) , rgba(255, 255, 255, 0)); /* Standard syntax */
+	z-index: 2;
+}
+
+.game-item-container .game-logo{
+	position: absolute;
+	margin-left: 10%;
+	margin-top: 90px;
+	width: 30%;
+	height: 180px;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-filter: brightness(20%);
+	-moz-filter: brightness(20%);
+	-o-filter: brightness(20%);
+	filter: brightness(20%);
+}
+
+.game-item-container .open-panel{
+	position: absolute;
+	width: 50%;
+	height: 360px;
+	left: 100%;
+	-webkit-transition: left 0.6s;
+	-moz-transition: left 0.6s;
+	-o-transition: left 0.6s;
+	transition: left 0.6s;
+	border-left: solid 10px #f4b400;
+}
+
+.game-available .game-logo{
+	-webkit-filter: brightness(100%);
+	-moz-filter: brightness(100%);
+	-o-filter: brightness(100%);
+	filter: brightness(100%);
+}
+
+.game-available .game-background{
+	opacity: 0.6;
+	-webkit-filter: brightness(70%);
+	-moz-filter: brightness(70%);
+	-o-filter: brightness(70%);
+	filter: brightness(70%);
+}
+
+.game-available:hover{
+
+}
+
+.game-available:hover .open-panel{
+	left: 50%;
+}
+
+.game-available:hover .game-background{
+	width: 50%;
+	-webkit-filter: brightness(100%);
+	-moz-filter: brightness(100%);
+	-o-filter: brightness(100%);
+	filter: brightness(100%);
+}
+
+
+.game-item-container .game-foreground{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+
+.avail-friends-icon{
+	display: inline-block;
+	top: 40%;
+	margin-top: -84px;
+	height: 84px;
+	width: 100%;
+	color: #f4b400;
+}
+
+.friends-info{
+	display: inline-block;
+	top: 40%;
+	width: 100%;
+	height: 50px;
+	font-weight: 600;
+}
+
+.friends-number{
+	width: 100%;
+	color: #f4b400;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+paper-button[raised].colored {
+	background: #262626;
+	color: #f4b400;
+}
+
+#game-CoD .game-background{
+	background-image: url("../images/call-of-duty-guns.jpg");
+}
+
+#game-CoD .game-logo{
+	background-image: url("../images/CoD_logo.png");
+}
+
+#game-maplestory .game-background{
+	background-image: url("../images/maxresdefault.jpg");
+}
+
+#game-maplestory .game-logo{
+	background-image: url("../images/maplestory.png");
+}
+
+#game-league .game-background{
+	background-image: url("../images/cIbHmSS.jpg");
+}
+
+#game-league .game-logo{
+	background-image: url("../images/League_of_legends_logo_transparent.png");
+}
+
+@-webkit-keyframes background_slider{
+	from { top: -58px; left: -92px;}
+	to { top: 0px; left: 0px;}
+}
+@-moz-keyframes background_slider{
+	from { top: -58px; left: -92px;}
+	to { top: 0px; left: 0px;}
+}
+@-o-keyframes background_slider{
+	from { top: -58px; left: -92px;}
+	to { top: 0px; left: 0px;}
+}
+@keyframes background_slider{
+	from { top: -58px; left: -92px;}
+	to { top: 0px; left: 0px;}
+}
+
+@-webkit-keyframes glow-bar{
+	0%{box-shadow: 10px 0px 20px #f4b400;}
+	50%{box-shadow: 20px 0px 40px #f4b400;}
+	100%{box-shadow: 10px 0px 20px #f4b400;}
+}
+@-moz-keyframes glow-bar{
+	from { top: -2900px; left: -4600px;}
+	to { top: 0px; left: 0px;}
+}
+@-o-keyframes glow-bar{
+	from { top: -2900px; left: -4600px;}
+	to { top: 0px; left: 0px;}
+}
+@keyframes glow-bar{
+	from { top: -2900px; left: -4600px;}
+	to { top: 0px; left: 0px;}
+}
+
+@-webkit-keyframes drop-in-nav { 	0% { margin-left: -300px; } 100% { margin-left: 0px; } }
+@-moz-keyframes drop-in-nav {	 	0% { margin-left: -300px; } 100% { margin-left: 0px; } }
+@-o-keyframes drop-in-nav { 		0% { margin-left: -300px; } 100% { margin-left: 0px; } }
+@keyframes drop-in-nav {			0% { margin-left: -300px; } 100% { margin-left: 0px; } }
+
+@-webkit-keyframes drop-in-bot { 	0% { margin-top: 200%; } 100% { margin-top: 0; } }
+@-moz-keyframes drop-in-bot {	 	0% { margin-top: 200%; } 100% { margin-top: 0; } }
+@-o-keyframes drop-in-bot { 		0% { margin-top: 200%; } 100% { margin-top: 0; } }
+@keyframes drop-in-bot {			0% { margin-top: 200%; } 100% { margin-top: 0; } }
