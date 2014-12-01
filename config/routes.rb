@@ -64,4 +64,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get '/game', to: 'games#index'
+  get '/game/new', to: 'games#new', as: 'games'
+  post '/game/new', to: 'games#create'
 end
