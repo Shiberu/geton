@@ -1,29 +1,143 @@
-<h2>Sign up</h2>
+<div class="page signup">
+  <link rel="import" href="http://www.polymer-project.org/components/paper-button/paper-button.html">
+  <link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
+  <link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html">
+  <link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-input-decorator.html">
+  <link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-input.html">
+  <link rel="import" href="http://www.polymer-project.org/components/paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="http://www.polymer-project.org/components/core-label/core-label.html">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <script src="http://www.polymer-project.org/components/webcomponentsjs/webcomponents.js"></script>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <div class="no-overflow">
+      <div class="background-slider">
+      </div>
+      <div class="container">
+        <div class="center">
+          <div class="header">
+            <h1>
+              GETON
+            </h1>
+            <h2>
+              Sign up
+            </h2>
+          </div>
+          <div class="content">
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+              <div class="basic-info">
+                <h2>
+                  Basic Information
+                </h2>
+                <hr class="form-divider"/>
+                <div class="input-row">
+                  <paper-input-decorator class="signup-input half-input" label="First Name" id="firstname-decor" floatingLabel error="Input is required!">
+                    <%= f.text_field :first_name, :required => true, autofocus: true%>
+                  </paper-input-decorator>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+                  <paper-input-decorator class="signup-input half-input" label="Last Name" id="lastname-decor" floatingLabel error="Input is required!">
+                    <%= f.text_field :last_name, :required => true%>
+                  </paper-input-decorator>
+                </div>
+                <div class="input-row">
+                  <paper-input-decorator class="signup-input" label="E-mail Address" id="email-decor" floatingLabel error="Input is required!">
+                    <%= f.email_field :email, :required => true %>
+                  </paper-input-decorator>
+                </div>
+                <br>
+                <hr class="sub-divider">
+                <div class="input-row">
+                  <paper-input-decorator class="signup-input" label="Username" id="username-decor" floatingLabel error="Input is required!">
+                    <%= f.text_field :username, :required => true%>
+                  </paper-input-decorator>
+                </div>
+                <div class="input-row">
+                  <paper-input-decorator class="signup-input" label="Password" id="password-decor" floatingLabel error="Input is required!">
+                    <%= f.password_field :password, autocomplete: "off", :required => true %>
+                  </paper-input-decorator>
+                </div>
+                <div class="input-row">
+                  <paper-input-decorator class="signup-input" label="Confirm Password" id="password-confirm-decor" floatingLabel error="Invalid input!">
+                    <%= f.password_field :password_confirmation, autocomplete: "off", :required => true %>
+                  </paper-input-decorator>
+                </div>
+                <paper-button class="colored custom basic-info-button">
+                  <core-icon icon="check"></core-icon>
+                  <%= f.submit "SIGN UP!", :class => 'devise-submit-button' %>
+                </paper-button>
+              </div>
+              <div class="game-select">
+                <h2>
+                  Which games do you enjoy playing?
+                </h2>
+                <hr class="form-divider"/>
+                <div class="game-scroller-wrapper">
+                  <div class="game-scroller">
+                    <core-label class="game-list-item" horizontal layout>
+                      <div class="item-wrapper">
+                        <paper-checkbox for></paper-checkbox>
+                        <div class="img-wrapper">
+                          <img src="images/League_of_legends_logo_transparent.png" alt="LoL">
+                        </div>
+                        <div class="game-name-wrapper">
+                          <h4>League of Legends</h4>
+                        </div>
+                      </div>
+                    </core-label>
+                    <core-label class="game-list-item" horizontal layout>
+                      <div class="item-wrapper">
+                        <paper-checkbox for></paper-checkbox>
+                        <div class="img-wrapper">
+                          <img src="images/maplestory.png" alt="ms">
+                        </div>
+                        <div class="game-name-wrapper">
+                          <h4>Maple Story</h4>
+                        </div>
+                      </div>
+                    </core-label>
+                    <core-label class="game-list-item" horizontal layout>
+                      <div class="item-wrapper">
+                        <paper-checkbox for></paper-checkbox>
+                        <div class="img-wrapper">
+                          <img src="images/mabinogi.png" alt="mabinogi">
+                        </div>
+                        <div class="game-name-wrapper">
+                          <h4>Mabinogi</h4>
+                        </div>
+                      </div>
+                    </core-label>
+                    <core-label class="game-list-item" horizontal layout>
+                      <div class="item-wrapper">
+                        <paper-checkbox for></paper-checkbox>
+                        <div class="img-wrapper">
+                          <img src="images/CoD_logo.png" alt="CoD">
+                        </div>
+                        <div class="game-name-wrapper">
+                          <h4>Call of Duty</h4>
+                        </div>
+                      </div>
+                    </core-label>
+                    <core-label class="game-list-item" horizontal layout>
+                      <div class="item-wrapper">
+                        <paper-checkbox for></paper-checkbox>
+                        <div class="img-wrapper">
+                          <img src="images/runescape.png" alt="rs">
+                        </div>
+                        <div class="game-name-wrapper">
+                          <h4>Runescape</h4>
+                        </div>
+                      </div>
+                    </core-label>
+                  </div>
+                </div>
+                <paper-button class="colored custom sign-up-button">
+                  <core-icon icon="check"></core-icon>
+                  <%= f.submit "SIGN UP!" %>
+                </paper-button>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

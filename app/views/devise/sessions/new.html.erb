@@ -4,7 +4,8 @@
   <link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html">
   <link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-input-decorator.html">
   <link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-input.html">
-
+  <link rel="import" href="http://www.polymer-project.org/components/paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="http://www.polymer-project.org/components/core-label/core-label.html">
 
   <header>
     <div class="logo">
@@ -25,7 +26,7 @@
         <a class="button" href="javascript:void(0)">
           <div class="show-more-button" id="show-more-signup">
             <div class="more-basic">
-              SIGN UP
+              <%= link_to('SIGN UP', new_user_registration_path)  %>
             </div>
             <div class="ease-more-button">
             </div>
@@ -57,7 +58,11 @@
               <paper-button class="custom" id="login-cancel">
                 <core-icon icon="clear"></core-icon>
                 cancel
-              </paper-button>
+              </paper-button><br>
+              <div class="remember-me-checkbox">
+                <paper-checkbox for><%= f.check_box :remember_me %></paper-checkbox>
+                Remember Me!
+              </div>
             </div>
           <% end %>
         </div>
