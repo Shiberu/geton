@@ -27,4 +27,13 @@ $(document).ready(function(){
 		$("#password-input").val('');
 		login_open = false;
 	});
+/*
+	$(".basic-info-button").click(function(){
+		//if (b1&&b2&&b3&&b4&&b5&&b6&&b7){
+		$(".basic-info").animate({opacity: 0}, 600);
+		setTimeout(function(){$(".basic-info").css("display","none")}, 600);
+		setTimeout(function(){$(".game-select").css("display","block")}, 600);
+		$(".game-select").delay(600).animate({opacity: 1}, 600);
+		//}
+	});*/
 });

@@ -639,7 +639,7 @@ footer h3 {
 	text-align: left;
 	width: 100%;
 	color: #fbfbfb;
-	height: 250px;
+	height: 300px;
 	border-radius: 10px;
 	border: solid 2px #fbfbfb;
 }
@@ -727,6 +727,14 @@ paper-button.hover:hover {
 
 paper-button.yellow-ripple::shadow #ripple {
 	color: #f4b400;
+}
+
+.remember-me-checkbox{
+	line-height: 50px;
+}
+
+.remember-me-checkbox paper-checkbox{
+	margin-right: 20px;
 }
 
 .filter{
