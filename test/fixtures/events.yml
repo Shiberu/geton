@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  created_at: 2014-11-30 22:28:25
+  expires_at: 2014-11-30 22:28:25
+  owner_id: 1
+  user_id: 
+
+two:
+  created_at: 2014-11-30 22:28:25
+  expires_at: 2014-11-30 22:28:25
+  owner_id: 1
+  user_id: 
