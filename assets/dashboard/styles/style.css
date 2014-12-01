@@ -49,7 +49,7 @@ body{
 .nav-bar-title{
 	display: inline-block;
 	width: 100%;
-	top: 10%;
+	top: 30%;
 	margin-top: -35px;
 	color: #fbfbfb;
 	font-weight: 600;
@@ -60,7 +60,7 @@ body{
 
 .nav-bar-title-underline{
 	display: inline-block;
-	top: 10%;
+	top: 30%;
 	width: 306px;
 	left: -6px;
 	height: 7px;
@@ -74,7 +74,7 @@ body{
 .nav-bar-welcome{
 	display: inline-block;
 	color: #fbfbfb;
-	top: 10%;
+	top: 30%;
 	margin-top: 50px;
 	width: 100%;
 	font-size: 20px;
@@ -87,7 +87,7 @@ body{
 .nav-bar-menu{
 	display: inline-block;
 	color: #fbfbfb;
-	top: 10%;
+	top: 30%;
 	width: 100%;
 }
 
@@ -137,7 +137,7 @@ body{
 
 .game-item-container{
 	width: 100%;
-	height: 200px;
+	height: 360px;
 	-webkit-transition: height 0.6s;
 	-moz-transition: height 0.6s;
 	-o-transition: height 0.6s;
@@ -182,9 +182,9 @@ body{
 .game-item-container .game-logo{
 	position: absolute;
 	margin-left: 10%;
-	margin-top: 50px;
+	margin-top: 90px;
 	width: 30%;
-	height: 100px;
+	height: 180px;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;
@@ -200,7 +200,7 @@ body{
 .game-item-container .open-panel{
 	position: absolute;
 	width: 50%;
-	height: 200px;
+	height: 360px;
 	left: 100%;
 	-webkit-transition: left 0.6s;
 	-moz-transition: left 0.6s;
@@ -251,8 +251,8 @@ body{
 .avail-friends-icon{
 	display: inline-block;
 	top: 40%;
-	margin-top: -60px;
-	height: 60px;
+	margin-top: -84px;
+	height: 84px;
 	width: 100%;
 	color: #f4b400;
 }
@@ -263,21 +263,18 @@ body{
 	width: 100%;
 	height: 50px;
 	font-weight: 600;
-	font-size: 12px;
 }
 
 .friends-number{
 	width: 100%;
 	color: #f4b400;
 	font-weight: 600;
-	font-size: 30px;
+	font-size: 50px;
 }
 
 paper-button[raised].colored {
-	margin-top: -10px;
 	background: #262626;
 	color: #f4b400;
-	font-size: 15px;
 }
 
 #game-CoD .game-background{

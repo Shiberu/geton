@@ -1,4 +1,4 @@
-* {
+/* * {
 	float:left;
 	margin:0;
 	padding:0;
@@ -16,7 +16,56 @@ a {
 	font-family:inherit;
 	color:inherit;
 	font-size:inherit;
+}*/
+
+.page{
+	float: left;
+	margin:0;
+	padding:0;
+	font-family:'Open Sans';
+	font-weight:300;
+	position:relative;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+
+	display:-ms-flexbox;
+	-ms-flex-pack:center;
+	-ms-flex-align:center;
+
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+
+	display:box;
+	box-pack:center;
+	box-align:center;
 }
+
+.page header,section,article,footer{
+	width:100%
+}
+
+.page h1,h2,h3,h4,h5,h6{
+	width:100%;
+	font-weight:lighter; text-align:center;
+}
+
+.page a, c, br{
+	float: none;
+}
+
+.page a{
+	text-decoration:inherit;
+	font-family:inherit;
+	color:inherit;
+	font-size:inherit;
+}
+
 .bar input, a,.stripes,.submit,header a {
 	transition:			0.2s ease;
 	-webkit-transition:	0.2s ease;
@@ -96,9 +145,10 @@ a {
   	-o-animation:      fade-in 0.5s ease;
   	animation:         fade-in 0.5s ease;
 }
-	.nav {
+.nav {
 		padding:40px 50px;
-	}
+}
+
 img {
 	border:none;
 	outline:none;
@@ -147,7 +197,10 @@ header {
 		text-transform:uppercase;
 		color:#FFF;
 		width:auto;
-	}
+	}	
+		header ul {
+			list-style: none;
+		}
 		header li a {
 			display:inline-block;
 			float:left;
@@ -161,8 +214,9 @@ header {
 			border-bottom:1px dotted #FFF;
 		}
 	.logo {
-		width:150px;
-		margin:10px 0;
+		display: inline-block;
+		width:60px;
+		margin-top:10px;
 	}
 		.logo h1 {
 			line-height:2em;
@@ -175,12 +229,6 @@ header {
     text-align:center;
     overflow:hidden;
 }
-    .center-container::before {
-        content:"";
-        display:inline-block;
-        vertical-align:middle;
-        height:100%;
-    }
 .center {
     display:inline-block;
     text-align:center;
@@ -189,6 +237,7 @@ header {
     width:700px;
 }
 h1.title {
+	margin: 0;
 	font-size:3.1em;
 	font-family:'Raleway';
 	font-weight:100;
@@ -201,7 +250,7 @@ h1.title {
 .subtitle {
 	color:#FFF;
 	width:100%;
-	padding:20px 0;
+	padding:10px 0;
 	font-weight:600;
 	letter-spacing:2px;
 	font-size:0.75em;
@@ -212,12 +261,21 @@ h1.title {
   	-o-animation:      fade-in-3 1.25s ease;
   	animation:         fade-in-3 1.25s ease;
 }
-	.center .button {
-		-webkit-animation: fade-in-4 2s ease;
-	  	-moz-animation:    fade-in-4 2s ease;
-	  	-o-animation:      fade-in-4 2s ease;
-	  	animation:         fade-in-4 2s ease;
-	}
+	
+.center .button {
+	-webkit-animation: fade-in-4 2s ease;
+	  -moz-animation:    fade-in-4 2s ease;
+	  -o-animation:      fade-in-4 2s ease;
+	  animation:         fade-in-4 2s ease;
+}
+
+.show-more-button{
+	-webkit-animation: fade-in-4 2s ease;
+	-moz-animation:    fade-in-4 2s ease;
+	-o-animation:      fade-in-4 2s ease;
+	animation:         fade-in-4 2s ease;
+}
+
 	.break {
 		width:100%;
 		float:inline-block;
@@ -367,12 +425,6 @@ footer h3 {
 	-ms-transition: .3s ease;
 	transition: .3s ease;
 	background-color: rgba(244, 180, 0, 0.2);
-	/*
-	-webkit-animation:	color_flow_background 4s infinite;
-	-moz-animation:		color_flow_background 4s infinite;
-	-o-animation:		color_flow_background 4s infinite;
-	animation:			color_flow_background 4s infinite;
-	*/
 }
 
 .more-basic{
@@ -597,8 +649,7 @@ footer h3 {
 	width: 90%;
 	margin-left: 5%;
 	font-size: 20px;
-	margin-top: 5px;
-	margin-bottom: 10px;
+	padding: 5px;
 }
 
 .login-input /deep/ ::-webkit-input-placeholder{
@@ -649,6 +700,7 @@ footer h3 {
 	left: 50%;
 	top: 10%;
 	margin-left: -50px;
+	margin-top: 10px;
 	text-align: center;
 }
 

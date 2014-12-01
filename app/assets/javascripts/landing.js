@@ -3,7 +3,7 @@ var login_open = false;
 $(document).ready(function(){
 	$("#login-open-button").click(function(){
 		if(!login_open){
-			$("#login-dialog").animate({bottom: "-10%"}, 350);
+			$("#login-dialog").animate({bottom: "35%"}, 350);
 			$("#login-dialog").removeClass("dialog-hidden", 1000, "linear");
 			$("#landing-filter").removeClass("filter-hidden", 1000, "linear");
 			login_open = true;
