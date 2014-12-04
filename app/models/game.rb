@@ -4,4 +4,6 @@ class Game < ActiveRecord::Base
 
   has_attached_file :banner, :styles => {:default => "1080x608"}
   validates_attachment_content_type :icon, :content_type => /\Aimage\/.*\Z/
+
+  has_and_belongs_to_many :users
 end
