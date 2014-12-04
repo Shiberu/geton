@@ -289,6 +289,30 @@ body .dashboard{
 	color: #f4b400;
 }
 
+#game-boir .game-background{
+	background-image: url("../assets/boir-screenshot.jpg");
+}
+
+#game-boir .game-logo{
+	background-image: url("../assets/boir.png");
+}
+
+#game-runescape .game-background{
+	background-image: url("../assets/runescape-screenshot.jpg");
+}
+
+#game-runescape .game-logo{
+	background-image: url("../assets/runescape.png");
+}
+
+#game-mabinogi .game-background{
+	background-image: url("../assets/mabinogi-screenshot.jpg");
+}
+
+#game-mabinogi .game-logo{
+	background-image: url("../assets/mabinogi.png");
+}
+
 #game-CoD .game-background{
 	background-image: url("../assets/call-of-duty-guns.jpg");
 }
@@ -311,6 +335,14 @@ body .dashboard{
 
 #game-league .game-logo{
 	background-image: url("../assets/League_of_legends_logo_transparent.png");
+}
+
+#game-halo .game-background{
+	background-image: url("../assets/halo-screenshot.jpg");
+}
+
+#game-halo .game-logo{
+	background-image: url("../assets/halo.png");
 }
 
 @-webkit-keyframes background_slider{

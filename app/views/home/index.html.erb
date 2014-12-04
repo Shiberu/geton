@@ -43,7 +43,7 @@
           <paper-item>
             <div>
               <core-icon icon="refresh"></core-icon>
-              Refresh
+              <a href="javascript:history.go(0)">Refresh</a>
             </div>
           </paper-item>
           <paper-item>
@@ -59,15 +59,38 @@
       <div class="game-scroller">
         <div class="game-container">
           <% current_user.games.each do |game| %>
-            <div class="game-item-container game-available" id="game-league">
+            <% gameid = case game.name %>
+            <% when "Maple Story" %>
+            <%  "game-maplestory" %>
+            <% when "Mabinogi" %>
+            <%  "game-mabinogi" %>
+            <% when "The Binding of Isaac: Rebirth" %>
+            <%  "game-boir" %>
+            <% when "League of Legends" %>
+            <%  "game-league" %>
+            <% when "Call of Duty" %>
+            <%  "game-CoD" %>
+            <% when "Runescape" %>
+            <%  "game-runescape" %>
+            <% when "Halo: The Master Chief Collection" %>
+            <%  "game-halo" %>
+            <% end %>
+            <% numAvail = (game.users & current_user.friends & User.online).length %>
+            <% cla = case numAvail %>
+            <% when 0 %>
+            <%  "game-item-container" %>
+            <% else %>
+            <%  "game-item-container game-available" %>
+            <% end %>
+            <%= content_tag :div, class: cla, id: gameid do -%>
               <div class="game-foreground">
-                <div class="game-logo"><%= game.name %></div>
+                <div class="game-logo"></div>
                 <div class="open-panel">
                   <core-icon icon="account-circle" class="avail-friends-icon"></core-icon>
                   <div class="friends-info">
                     Available Friends:<br>
                     <span class="friends-number">
-                      <%= (game.users & current_user.friends).length %>
+                      <%= numAvail %>
                     </span>
                     <br><br>
                     <paper-button class="colored" raised>Let's Play!</paper-button>
@@ -76,7 +99,8 @@
               </div>
               <div class="game-background-grad"></div>
               <div class="game-background"></div>
-            </div>
+            <!--/div-->
+            <% end %>
           <% end %>
 
         </div>

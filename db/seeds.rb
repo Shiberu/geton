@@ -102,3 +102,27 @@ halo_mcc = Game.create(
   :users => User.where(:username => ['keffcat', 'weaponmaster'])
 )
 halo_mcc.save!
+
+league = Game.create(
+	name: "League of Legends", 
+	:users => User.where(:username => ['Shiberu', 'Doge', 'Light'])
+)
+league.save!
+
+maple = Game.create(
+	name: "Maple Story", 
+	:users => User.where(:username => ['xXRichdudeXx', 'Oppa', 'Doge', 'Light'])
+)
+maple.save!
+
+mabinogi = Game.create(
+	name: "Mabinogi", 
+	:users => User.where(:username => ['Shiberu', 'Oppa', 'xXRichdudeXx'])
+)
+mabinogi.save!
+
+runescape = Game.create(
+	name: "Runescape", 
+	:users => User.where(:username => ['xXRichdudeXx', 'Oppa'])
+)
+runescape.save!
