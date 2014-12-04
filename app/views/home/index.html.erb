@@ -53,7 +53,7 @@
 					<paper-item>
 						<div>
 							<core-icon icon="settings-power"></core-icon>
-							Log Out
+							<%= link_to('Log Out', destroy_user_session_path, :method => :delete) %>
 						</div>
 					</paper-item>
 				</paper-shadow>
