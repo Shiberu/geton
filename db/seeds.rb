@@ -91,13 +91,14 @@ User.all.each do |user1|
 	end
 end
 
-halo_mcc = Game.new
-halo_mcc.name = "Halo: The Master Chief Collection"
-halo_mcc.save!
-
 boi_rebirth = Game.create(
   name: "The Binding of Isaac: Rebirth", 
   :users => User.all
 )
 boi_rebirth.save!
 
+halo_mcc = Game.create(
+  name: "Halo: The Master Chief Collection", 
+  :users => User.where(:username => ['keffcat', 'weaponmaster'])
+)
+halo_mcc.save!
