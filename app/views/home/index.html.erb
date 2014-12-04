@@ -1,0 +1,132 @@
+<div class="page dashboard">
+	<link rel="import" href="http://www.polymer-project.org/components/paper-button/paper-button.html">
+	<link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
+	<link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html">
+	<link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-input-decorator.html">
+	<link rel="import" href="http://www.polymer-project.org/components/paper-input/paper-input.html">
+	<link rel="import" href="http://www.polymer-project.org/components/paper-checkbox/paper-checkbox.html">
+	<link rel="import" href="http://www.polymer-project.org/components/core-label/core-label.html">
+	<link rel="import" href="http://www.polymer-project.org/components/core-selector/core-selector.html">
+	<link rel="import" href="http://www.polymer-project.org/components/paper-shadow/paper-shadow.html">
+	<link rel="import" href="http://www.polymer-project.org/components/paper-item/paper-item.html">
+
+	<div class="no-overflow">
+		<div class="background-slider">
+		</div>
+		<div class="left-nav-bar">
+			<div class="nav-bar-title">
+				GETON
+			</div>
+			<div class="nav-bar-title-underline">
+			</div>
+			<div class="nav-bar-welcome">
+				<% if user_signed_in? %>
+					Welcome, <span class="nav-bar-username"><%= current_user.username %></span>
+				<% end %>
+			</div>
+			<div class="nav-bar-menu">
+				<paper-shadow z="2">
+					<paper-item>
+						<div>
+							<core-icon icon="account-child"></core-icon>
+							Manage Friends
+						</div>
+					</paper-item>
+					<paper-item>
+						<div>
+							<core-icon icon="add-box"></core-icon>
+							Add games
+						</div>
+					</paper-item>
+					<paper-item>
+						<div>
+							<core-icon icon="remove-circle"></core-icon>
+							Remove games
+						</div>
+					</paper-item>
+					<paper-item>
+						<div>
+							<core-icon icon="refresh"></core-icon>
+							Refresh
+						</div>
+					</paper-item>
+					<paper-item>
+						<div>
+							<core-icon icon="settings-power"></core-icon>
+							Log Out
+						</div>
+					</paper-item>
+				</paper-shadow>
+			</div>
+		</div>
+		<div class="game-scroller-wrapper">
+			<div class="game-scroller">
+				<div class="game-container">
+					<div class="game-item-container game-available" id="game-CoD">
+						<div class="game-foreground">
+							<div class="game-logo">
+							</div>
+							<div class="open-panel">
+								<core-icon icon="account-circle" class="avail-friends-icon"></core-icon>
+								<div class="friends-info">
+									Available Friends:<br>
+									<span class="friends-number">
+										6
+									</span>
+									<br><br>
+									<paper-button class="colored" raised>Let's Play!</paper-button>
+								</div>
+							</div>
+						</div>
+						<div class="game-background-grad">
+						</div>
+						<div class="game-background">
+						</div>
+					</div>
+					<div class="game-item-container game-available" id="game-league">
+						<div class="game-foreground">
+							<div class="game-logo">
+							</div>
+							<div class="open-panel">
+								<core-icon icon="account-circle" class="avail-friends-icon"></core-icon>
+								<div class="friends-info">
+									Available Friends:<br>
+									<span class="friends-number">
+										4
+									</span>
+									<br><br>
+									<paper-button class="colored" raised>Let's Play!</paper-button>
+								</div>
+							</div>
+						</div>
+						<div class="game-background-grad">
+						</div>
+						<div class="game-background">
+						</div>
+					</div>
+					<div class="game-item-container " id="game-maplestory">
+						<div class="game-foreground">
+							<div class="game-logo">
+							</div>
+							<div class="open-panel">
+								<core-icon icon="account-circle" class="avail-friends-icon"></core-icon>
+								<div class="friends-info">
+									Available Friends:<br>
+									<span class="friends-number">
+										0
+									</span>
+									<br><br>
+									<paper-button class="colored" raised>Let's Play!</paper-button>
+								</div>
+							</div>
+						</div>
+						<div class="game-background-grad">
+						</div>
+						<div class="game-background">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

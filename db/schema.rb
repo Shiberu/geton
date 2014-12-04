@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141201071149) do
+ActiveRecord::Schema.define(version: 20141204060911) do
 
   create_table "games", force: true do |t|
     t.string   "name"
@@ -25,6 +25,11 @@ ActiveRecord::Schema.define(version: 20141201071149) do
     t.string   "banner_content_type"
     t.integer  "banner_file_size"
     t.datetime "banner_updated_at"
+  end
+
+  create_table "joins_table_user_games", force: true do |t|
+    t.string "user"
+    t.string "game"
   end
 
   create_table "users", force: true do |t|
