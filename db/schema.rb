@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 20141204101533) do
     t.datetime "banner_updated_at"
   end
 
-  create_table "joins_table_user_games", force: true do |t|
-    t.string "user"
-    t.string "game"
+  create_table "games_users", force: true do |t|
+    t.integer "user_id"
+    t.integer "game_id"
   end
 
   create_table "users", force: true do |t|

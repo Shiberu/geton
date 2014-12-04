@@ -43,12 +43,12 @@ user4.password_confirmation = "gangnamstyle"
 user4.save!
 
 user5 = User.new
-user5.email = "kvchen@gmail.com"
+user5.email = "keffcat@gmail.com"
 user5.first_name = "Kevin"
 user5.last_name = "Chen"
-user5.username = "Isaac"
-user5.password = "tearsforthewin"
-user5.password_confirmation = "tearsforthewin"
+user5.username = "keffcat"
+user5.password = "shitters"
+user5.password_confirmation = "shitters"
 user5.save!
 
 user6 = User.new
@@ -90,3 +90,14 @@ User.all.each do |user1|
 		end
 	end
 end
+
+halo_mcc = Game.new
+halo_mcc.name = "Halo: The Master Chief Collection"
+halo_mcc.save!
+
+boi_rebirth = Game.create(
+  name: "The Binding of Isaac: Rebirth", 
+  :users => User.all
+)
+boi_rebirth.save!
+
