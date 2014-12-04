@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base
   	devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:username, :email) }
   	devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:first_name, :last_name ,:username, :email, :password, :password_confirmation) }
   end
+
+  after_filter :user_activity
+
+  private
+
+  def user_activity
+  	current_user.try :touch
+  end
 end
