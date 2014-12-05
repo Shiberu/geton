@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  scope :online, lambda{ where("updated_at > ?", 5.minutes.ago) }
+  scope :online, lambda{ where("updated_at > ?", 1.minutes.ago) }
 
   has_and_belongs_to_many :games
 
@@ -13,6 +13,6 @@ class User < ActiveRecord::Base
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
 
   def online?
-  	updated_at > 5.minutes.ago
+  	updated_at > 1.minutes.ago
   end
 end
