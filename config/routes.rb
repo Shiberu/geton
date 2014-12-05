@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     authenticated :user do
       root 'home#index', as: :authenticated_root
+      #get 'home#add_game', as: 'add_game'
     end
 
     unauthenticated do
@@ -70,6 +71,4 @@ Rails.application.routes.draw do
   get '/game', to: 'games#index'
   get '/game/new', to: 'games#new', as: 'games'
   post '/game/new', to: 'games#create'
-
-  get '/add/game', to: 'home#add_game'
 end
