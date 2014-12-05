@@ -2,6 +2,7 @@
 
 <form action="">
   <% @games.each do |game| %>
-    <input type="checkbox" name="<%= game.name %>"><%= game.name %>
+    <input type="checkbox" name="<%= game.name %>"><%= game.name %><br/>
   <% end %>
+  <input type="submit">
 </form>
