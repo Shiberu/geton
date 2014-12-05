@@ -10,7 +10,7 @@
   <header>
     <div class="logo">
       <!-- <img src="images/logo-light.png"> -->
-      <h1>GetOn</h1>
+      <%= image_tag "logo_small.fw.png" %>
     </div>
     <nav>
       <ul>
@@ -28,10 +28,8 @@
             <div class="more-basic">
               <%= link_to('SIGN UP', new_user_registration_path)  %>
             </div>
-            <div class="ease-more-button">
-            </div>
-            <div class="background-cover">
-            </div>
+            <div class="ease-more-button"></div>
+            <div class="background-cover"></div>
           </div>
         </a>
       </span>
@@ -69,9 +67,9 @@
       </div>
     </div>
     <div class="background-image-container">
-      <%= image_tag "bg-index-top1.jpg" %>
       <%= image_tag "bg-index-top2.jpg" %>
       <%= image_tag "bg-index-top3.jpg" %>
+      <%= image_tag "bg-index-top1.jpg" %>
       <%= image_tag "bg-index-top4.jpg" %>
     </div>
     <div class="filter filter-hidden" id="landing-filter">
