@@ -1,5 +1,7 @@
 <h1>Add games to your collection:</h1>
 
-<% @games.each do |game| %>
-  <%= game.name %>
-<% end %>
+<form action="">
+  <% @games.each do |game| %>
+    <input type="checkbox" name="<%= game.name %>"><%= game.name %>
+  <% end %>
+</form>
